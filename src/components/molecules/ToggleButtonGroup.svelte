@@ -7,14 +7,15 @@
     export let value = ''
     export let options = []
 
-    const handleSelected = option => {
-        value = option
+    const handleToggled = (option, toggle) => {
+        console.log('toggle', toggle)
+        value = toggle ? option : ''
         emit('input', value)
     }
 </script>
 
 <div class="toggle-button-group">
     {#each options as option}
-    <ToggleButton readable={option} on:selected={() => handleSelected(option)} isActive={value === option} />
+    <ToggleButton readable={option} on:toggled={({detail}) => handleToggled(option, detail)} isActive={value === option} />
     {/each}
 </div>

@@ -8,7 +8,7 @@
 
     const handleClick = () => {
         isActive = !isActive
-        emit('selected')
+        emit('toggled', isActive)
     }
 </script>
 
@@ -18,11 +18,19 @@
 
 <style lang="scss">
     .toggle-button {
+        background: mix(transparent, white, 85);
+        padding: 8px 16px;
+        margin: 5px 8px;
+        border: none;
+        outline: none;
+        transition: background ease 0.25s;
+
         &:hover {
+            background: mix(transparent, white, 65);
             cursor: pointer;
         }
         &.active {
-            background: green;
+            background: #e9dfdd;
         }
     }
 </style>

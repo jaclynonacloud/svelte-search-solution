@@ -1,8 +1,9 @@
 <script>
-    import SearchResult from "../atoms/SearchResult.svelte";
+    import SearchResult from "../atoms/SearchResult.svelte"
 
     export let results = []
     export let filter = ''
+    export let value = ''
 
     $: filteredResults = filter === '' ? results :
         results.filter(({readable, id}) => {
@@ -14,6 +15,14 @@
 
 <div class="search-result-list">
     {#each filteredResults as {readable, id}}
-    <SearchResult {readable} {id} />
+    <SearchResult {readable} {id} on:selected={() => value = id} />
     {/each}
 </div>
+
+<style lang="scss">
+    .search-result-list {
+        padding: 4px;
+        height: 200px;
+        overflow-y: scroll;
+    }
+</style>
