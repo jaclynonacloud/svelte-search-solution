@@ -2,6 +2,10 @@
     import SearchInput from '../atoms/SearchInput.svelte'
     import ToggleButtonGroup from '../molecules/ToggleButtonGroup.svelte'
     import SearchResultList from '../molecules/SearchResultList.svelte'
+
+    export let data = {}
+
+    console.log(data)
 </script>
 
 <section class="search-solution">
