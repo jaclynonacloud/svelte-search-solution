@@ -1,10 +1,7 @@
 <script>
     import SearchResult from "../atoms/SearchResult.svelte";
 
-    export let results = [
-        { id: 'carrot', readable: 'Carrot' },
-        { id: 'zucchini', readable: 'Zucchini'}
-    ]
+    export let results = []
 </script>
 
 <div class="search-result-list">

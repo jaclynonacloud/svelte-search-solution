@@ -4,14 +4,16 @@
     import SearchResultList from '../molecules/SearchResultList.svelte'
 
     export let data = {}
+    export let key = ''
 
-    console.log(data)
+    $: options = Object.keys(data)
+    $: results = data[key]
 </script>
 
 <section class="search-solution">
     <SearchInput />
-    <ToggleButtonGroup />
-    <SearchResultList />
+    <ToggleButtonGroup {options} bind:value={key} />
+    <SearchResultList {results} />
     <div class="search-solution__footer">esc to quit</div>
 </section>
 

@@ -5,7 +5,7 @@
     const emit = createEventDispatcher()
 
     export let value = ''
-    export let options = ['hello', 'world']
+    export let options = []
 
     const handleSelected = option => {
         value = option

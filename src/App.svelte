@@ -22,7 +22,7 @@
 </script>
 
 <main>
-	<SearchSolution {data} />
+	<SearchSolution {data} key="fruits" />
 </main>
 
 <style>
