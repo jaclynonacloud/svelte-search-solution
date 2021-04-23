@@ -1,5 +1,5 @@
 <script>
-	import SearchSolution from "./components/SearchSolution.svelte";
+	import SearchSolution from './components/organisms/SearchSolution.svelte'
 </script>
 
 <main>
