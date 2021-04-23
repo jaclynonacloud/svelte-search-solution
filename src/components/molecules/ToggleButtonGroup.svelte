@@ -1,5 +1,5 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+    import { createEventDispatcher } from "svelte"
     import ToggleButton from "../atoms/ToggleButton.svelte"
 
     const emit = createEventDispatcher()

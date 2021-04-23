@@ -1,9 +1,9 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+    import { createEventDispatcher } from "svelte"
 
     const emit = createEventDispatcher()
-    export let readable='button'
 
+    export let readable='button'
     export let isActive = false
 
     const handleClick = () => {
