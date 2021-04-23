@@ -5,15 +5,17 @@
 
     export let data = {}
     export let key = ''
+    
+    let search = ''
 
     $: options = Object.keys(data)
     $: results = data[key]
 </script>
 
 <section class="search-solution">
-    <SearchInput />
+    <SearchInput bind:value={search} />
     <ToggleButtonGroup {options} bind:value={key} />
-    <SearchResultList {results} />
+    <SearchResultList {results} filter={search} />
     <div class="search-solution__footer">esc to quit</div>
 </section>
 
