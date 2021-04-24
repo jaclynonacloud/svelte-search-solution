@@ -17,17 +17,21 @@
 </button>
 
 <style lang="scss">
+    @import '../../sass/main';
+    
     .toggle-button {
-        background: mix(transparent, white, 85);
+        @include glassyPanelSingle(rgb(168, 168, 168));
         padding: 8px 16px;
         margin: 5px 8px;
         border: none;
-        outline: none;
         transition: background ease 0.25s;
 
         &:hover {
             background: mix(transparent, white, 65);
             cursor: pointer;
+        }
+        &:focus {
+            outline: solid 1px white;
         }
         &.active {
             background: #e9dfdd;

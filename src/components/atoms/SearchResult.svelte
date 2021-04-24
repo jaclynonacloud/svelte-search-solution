@@ -9,23 +9,36 @@ import { createEventDispatcher } from 'svelte';
     export let id = 'id'
 </script>
 
-<div class="search-result" transition:fade={{ duration: 450 }} on:click={() => emit('selected')}>
+<button class="search-result" transition:fade={{ duration: 450 }} on:click={() => emit('selected')}>
     <div class="search-result__readable">{@html readable}</div>
     <div class="search-result__id">{@html id}</div>
-</div>
+</button>
 
 <style lang="scss">
+    @import '../../sass/main';
+    
     .search-result {
         display: flex;
         justify-content: space-between;
+        background: transparent;
+        width: 100%;
         padding: 10px 8px;
+        margin: 0;
         color: #1a1616;
+        border: none;
+        outline: none;
         box-sizing: border-box;
         cursor: pointer;
         transition: background ease 0.25s;
 
         &:hover {
-            background: rgba(255, 255, 255, 0.336);
+            @include glassyPanelSingle(rgba(201, 199, 199, 0.576));
+        }
+        &:focus {
+            outline: solid 1px #ff9da1;
+        }
+        &:focus-visible {
+            @include glassyPanelSingle(#a7a7a7);
         }
 
         &__id {

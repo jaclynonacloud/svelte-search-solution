@@ -21,20 +21,22 @@
 </section>
 
 <style lang="scss">
+    @import '../../sass/main';
+
     .search-solution {
         display: flex;
         flex-flow: column;
-        background: #bba29c;
+        @include glassyPanel(#bba29c);
         width: 100%;
         max-width: 450px;
         padding: 10px;
         color: white;
-        border: solid 1px #dad2d0;
+        border: solid 1px #ff515a;
         box-shadow: 0 0 35px rgba(39, 21, 21, 0.5);
         
         &__footer {
             align-self: center;
-            background: rgba(255, 255, 255, 0.2);
+            @include glassyPanelSingle(#b4b4b4);
             color: #9b5858;
             padding: 5px 8px;
             font-size: 0.75em;
@@ -45,16 +47,16 @@
         }
 
         :global(::-webkit-scrollbar) {
-            background: #8b7874;
+            background: #7c2d38;
             width: 5px;
             border-radius: 2px;
         }
         :global(::-webkit-scrollbar-thumb) {
-            background: #e9dfdd;
+            background: #ee4c54;
             border-radius: 2px;
 
             &:hover {
-                background: white;
+                background: #ff7974;
             }
         }
     }

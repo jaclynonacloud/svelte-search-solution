@@ -1,0 +1,31 @@
+@mixin glassyPanel($col) {
+	position: relative;
+	@content;
+
+	& > * {
+		isolation: isolate;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $col;
+		mix-blend-mode: overlay;
+		pointer-events: none;
+		@content;
+	}
+}
+
+@mixin glassyPanelSingle($col) {
+	background: $col;
+	mix-blend-mode: overlay;
+	@content;
+
+	& > * {
+		isolation: isolate;
+	}
+}

@@ -26,14 +26,14 @@
             color: #0c0b0b;
             padding-bottom: 10px;
             border: none;
-                border-bottom: solid 1px rgba(146, 87, 76, 0.24);
+            border-bottom: solid 1px #ee4c54;
             border-radius: 0;
             mask-border-width: 300px;
             outline: none;
             transition: border ease 0.25s;
 
             &:focus {
-                border-bottom-color: #99626f;
+                border-bottom-color: #ff809d;
             }
 
             &::placeholder {
