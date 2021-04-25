@@ -6,5 +6,6 @@ A search solution component example made in Svelte for demonstration purposes.
 ## How to Run
 - Clone repo locally.
 - Install dependencies using `yarn`.
+- Navigate to branch: `9-completed-and-styled`.
 - Run locally using `yarn dev`.
 - Build globally using `yarn build`.
